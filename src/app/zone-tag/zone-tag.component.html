@@ -1,0 +1,16 @@
+<span [ngClass]="tagClasses" (click)="showDetails = ! showDetails">Zone {{index}}</span>
+
+<div class="modal" [class.is-active]="showDetails">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <article [ngClass]="detailsClasses">
+      <div class="message-header">
+        <p>Zone {{index}}</p>
+        <button class="delete" aria-label="delete"  (click)="showDetails = ! showDetails"></button>
+      </div>
+      <div class="message-body">
+        {{getZoneInfo()}}
+      </div>
+    </article>
+  </div>
+</div>

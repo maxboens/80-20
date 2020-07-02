@@ -1,0 +1,13 @@
+Week:
+
+<select name="week" [(ngModel)]="currentWeek" (ngModelChange)="setWeek()">
+  <option *ngFor="let week of weekNumbers" [ngValue]="week">{{week}}</option>
+</select>
+<p>Total Volume: {{weeklyVolume}}k<p>
+<app-run-table title="Monday" [runs]="getRunForDay(0)"></app-run-table>
+<app-run-table title="Tuesday" [runs]="getRunForDay(1)"></app-run-table>
+<app-run-table title="Wednesday" [runs]="getRunForDay(2)"></app-run-table>
+<app-run-table title="Thursday" [runs]="getRunForDay(3)"></app-run-table>
+<app-run-table title="Friday" [runs]="getRunForDay(4)"></app-run-table>
+<app-run-table title="Saturday" [runs]="getRunForDay(5)"></app-run-table>
+
